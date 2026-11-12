@@ -1,0 +1,18 @@
+# docker compose up            -> dashboard at http://localhost:8501
+# docker compose run --rm dashboard python -m waste_classifier.head --help
+#
+# Set WASTE_DATA_DIR to your dataset folder if it is not ./data, for example:
+#   WASTE_DATA_DIR=~/Downloads/archive/DATASET docker compose up
+services:
+  dashboard:
+    build: .
+    image: waste-classifier
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./outputs:/app/outputs                    # cached features and your trained models
+      - ${WASTE_DATA_DIR:-./data}:/data:ro        # the dataset (read-only)
+      - keras-cache:/root/.keras                  # downloaded pretrained weights
+
+volumes:
+  keras-cache:

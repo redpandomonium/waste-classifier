@@ -1,0 +1,23 @@
+# Dataset and training outputs stay out of git
+data/
+DATASET/
+outputs/
+*.keras
+*.h5
+*.tflite
+# ...except the one shared model in models/
+!models/*.tflite
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Claude Code / agent config
+.claude/
+.agents/

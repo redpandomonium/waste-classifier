@@ -1,0 +1,4 @@
+# Extra packages for the notebooks in eda/
+-r requirements.txt
+matplotlib
+jupyter

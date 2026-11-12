@@ -1,0 +1,58 @@
+{
+  "test_images": 2513,
+  "accuracy": 0.9275766016713092,
+  "per_class": {
+    "Organic": {
+      "precision": 0.9001969796454367,
+      "recall": 0.9785867237687366,
+      "f1-score": 0.9377564979480164
+    },
+    "Recyclable": {
+      "precision": 0.9696969696969697,
+      "recall": 0.8633093525179856,
+      "f1-score": 0.9134157944814463
+    }
+  },
+  "confusion_matrix": [
+    [
+      1371,
+      30
+    ],
+    [
+      152,
+      960
+    ]
+  ],
+  "val_accuracy": 0.9631295204162598,
+  "backbone": "efficientnetv2b0",
+  "settings": {
+    "learning_rate": 0.001,
+    "epochs": 30,
+    "batch_size": 256,
+    "dropout": 0.2,
+    "l2": 0.0003,
+    "seed": 1
+  },
+  "splits": {
+    "data_dir": "/sessions/rcw-01gjvurr6gyycytovrthvx2g/mnt/archive/DATASET",
+    "raw_train": 22564,
+    "dropped_from_train": {
+      "repeated_in_train": 40,
+      "also_in_test": 285,
+      "conflicting_label": 2
+    },
+    "train": {
+      "Organic": 11024,
+      "Recyclable": 8989
+    },
+    "val": {
+      "Organic": 1225,
+      "Recyclable": 999
+    },
+    "test": {
+      "Organic": 1401,
+      "Recyclable": 1112
+    }
+  },
+  "tflite_size_mb": 11.85
+}

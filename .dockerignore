@@ -1,0 +1,11 @@
+.git
+outputs
+data
+DATASET
+**/__pycache__
+**/.ipynb_checkpoints
+eda/figures
+eda/*.ipynb
+notebooks
+.venv
+venv
